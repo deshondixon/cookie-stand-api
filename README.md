@@ -1,5 +1,7 @@
 # Lab 34: Cookie Stand Api
 
+Run pip install -r requirements.txt
+
 Username: user
 Email: user@user.com
 Password: 1234

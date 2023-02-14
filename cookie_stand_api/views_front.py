@@ -1,5 +1,11 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    UpdateView,
+    CreateView,
+    DeleteView,
+)
 from django.urls import reverse_lazy
 from .models import CookieStandApi
 
@@ -33,7 +39,7 @@ class CookieStandApiCreateView(LoginRequiredMixin, CreateView):
 
 
 class CookieStandApiDeleteView(LoginRequiredMixin, DeleteView):
-    template_name = "cookie_stands/cookie_stands_delete.html"
+    template_name = "cookie_stand_api/cookie_stands_delete.html"
     model = CookieStandApi
-    context_object_name = "cookie_stand"
-    success_url = reverse_lazy("cookie_stand_list")
+    context_object_name = "cookie_stand_api"
+    success_url = reverse_lazy("cookie_stand_api_list")
